@@ -1,8 +1,9 @@
-import "./Header.scss"
+import './Header.scss'
 import { images } from '../../constants'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-    return (
+	return (
 		<header className='left-container'>
 			<div className='header'>
 				<div className='header-logo'>
@@ -12,7 +13,9 @@ const Header = () => {
 
 				<ul className='header-links'>
 					<li>Home</li>
-					<li>Products</li>
+					<Link to='https://www.google.com/' target='blank'>
+						<li>Products</li>
+					</Link>
 					<li>Pricing</li>
 					<li>Contact</li>
 				</ul>
@@ -26,5 +29,4 @@ const Header = () => {
 	)
 }
 
-
-export default Header;
+export default Header

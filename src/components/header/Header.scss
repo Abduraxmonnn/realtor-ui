@@ -1,77 +1,77 @@
 .header {
-    display: flex;
+	display: flex;
 }
 
 .header-logo > img {
-    max-width: 65px;
-    width: 100%;
-    cursor: pointer;
+	max-width: 65px;
+	width: 100%;
+	cursor: pointer;
 }
 
 .header-logo > span {
-    font-family: var(--space-grotesk);
-    font-size: 30px;
-    font-weight: 700;
-    cursor: pointer;
+	font-family: var(--space-grotesk);
+	font-size: 30px;
+	font-weight: 700;
+	cursor: pointer;
 }
 
 .header-links {
-    margin-left: 50px;
+	margin-left: 50px;
 
-    flex: 1;
+	flex: 1;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-    padding: 0 6rem;
+	padding: 0 6rem;
 }
 
 .header-links > li {
-    margin: 0 3rem;
-    cursor: pointer;
+	margin: 0 3rem;
+	cursor: pointer;
 }
 
 .header-login {
-    display: flex;
-    margin-right: 50px;
+	display: flex;
+	margin-right: 50px;
 }
 
 .header_sing-in {
-    margin-right: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+	margin-right: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
 
 .header_sing-up {
-    margin-top: 10px;
-    height: 43px;
-    display: flex;
-    padding: 10px 21px;
-    justify-content: center;
-    align-items: center;
-    gap: 37px;
-    border-radius: 160px;
-    background: var(--color-b);
-    color: var(--color-w);
-    cursor: pointer;
+	margin-top: 10px;
+	height: 43px;
+	display: flex;
+	padding: 10px 21px;
+	justify-content: center;
+	align-items: center;
+	gap: 37px;
+	border-radius: 160px;
+	background: var(--color-b);
+	color: var(--color-w);
+	cursor: pointer;
 }
 
 .header-links li:after {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 2px;
-  width: 0px;
-  background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width 0.5s ease, background-color 0.5s ease;
 }
 
 .header-links li:hover:after {
-  width: 100%;
-  background: var(--color-v);
+	width: 100%;
+	background: var(--color-v);
 }
