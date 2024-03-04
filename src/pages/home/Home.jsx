@@ -5,6 +5,7 @@ import React from 'react'
 import Header from '../../components/header/Header'
 import Intro from '../../components/home/intro/Intro'
 import Solution from '../../components/home/solution/Solution'
+import OurProducts from '../../components/home/ourproducts/OurProducts'
 
 const Home = () => {
 	return (
@@ -12,6 +13,7 @@ const Home = () => {
 			<Header />
 			<Intro />
 			<Solution />
+			<OurProducts />
 		</div>
 	)
 }

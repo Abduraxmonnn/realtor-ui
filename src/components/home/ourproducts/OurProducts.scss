@@ -1,0 +1,45 @@
+.main__block {
+	background-color: #eff2f7;
+	margin-top: 85px;
+	max-height: 1150px;
+	height: 100%;
+}
+
+.products__article {
+	display: flex;
+	justify-content: center;
+}
+
+.products__button {
+	margin-top: 130px;
+	display: inline-flex;
+	gap: 22px;
+	max-height: 25px;
+	height: 100%;
+}
+
+.products__button > img {
+	max-width: 20px;
+	width: 100%;
+	max-height: 20px;
+	height: 100%;
+}
+
+.products__button > p {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.products__subarticle {
+	margin-top: 250px;
+	max-width: 700px;
+	width: 100%;
+}
+
+.products__subarticle > span {
+	font-size: 70px;
+	font-weight: 400;
+	max-height: 225px;
+	height: 100%;
+}
