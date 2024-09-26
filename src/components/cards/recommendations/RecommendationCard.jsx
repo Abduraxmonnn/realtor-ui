@@ -9,7 +9,7 @@ const RecommendationCard = ({ product }) => {
 	const { key, category, desc, image, link } = product
 
 	return (
-		<div className='card'>
+		<div className='left-container card'>
 			<img width={356} height={449} src={image} alt='Products' />
 			<h5>{category}</h5>
 			<p className='card__desc'>{desc}</p>

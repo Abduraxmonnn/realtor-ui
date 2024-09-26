@@ -1,5 +1,5 @@
-.left-container.main__block {
-	display: flex;
+.main__block {
+	display: contents;
 	justify-content: center;
 	margin-top: 85px;
 	max-height: 1150px;
@@ -10,6 +10,7 @@
 .products__article {
 	text-align: center;
 	margin-top: 130px;
+	margin-bottom: 75px;
 }
 
 .products__button {
@@ -55,4 +56,9 @@
 .products__subarticle span:nth-child(2) {
 	font-weight: bold;
 	color: var(--color-v);
+}
+
+.products__list {
+	display: flex;
+	flex-direction: row;
 }

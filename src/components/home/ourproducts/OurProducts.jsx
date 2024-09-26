@@ -50,7 +50,7 @@ const OurProducts = () => {
 					<span>Rental Services</span>
 				</div>
 			</div>
-			<div className='products__list'>
+			<div className='left-container products__list'>
 				{products.map(product => (
 					<RecommendationCard key={product.key} product={product} />
 				))}
@@ -59,4 +59,4 @@ const OurProducts = () => {
 	)
 }
 
-export default OurProducts
+export default OurProducts;
