@@ -1,0 +1,121 @@
+.our-value {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  &__images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image-container {
+    &.secondary {
+      width: 100%;
+      max-width: 657px;
+      height: auto;
+      aspect-ratio: 657/409;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem; // This adds space between the arrow and the text
+    margin-bottom: 1.5rem;
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+
+    .highlight {
+      color: #6E2FFF;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 400px;
+  }
+}
+
+.get-started-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+
+  &:hover {
+    background: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-value {
+    &__images {
+      justify-content: center;
+    }
+
+    &__image-container {
+      &.secondary {
+        max-width: 100%;
+      }
+    }
+  }
+}
+

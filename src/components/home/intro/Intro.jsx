@@ -10,7 +10,7 @@ const Intro = () => {
 				<h1>
 					real estate <p>agency</p>
 				</h1>
-				<img src={images.intro_background_home} />
+				<img src={images.intro_background_home}  alt="intro"/>
 			</div>
 		</section>
 	)
