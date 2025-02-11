@@ -1,0 +1,157 @@
+.best-homes {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    .highlight {
+      color: #6E2FFF;
+    }
+  }
+
+  &__main-carousel {
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .carousel-content {
+      position: relative;
+      width: 100%;
+      height: 400px;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 1rem;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+
+      .location {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .price {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .control-button {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background: white;
+        }
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-home {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .price-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
