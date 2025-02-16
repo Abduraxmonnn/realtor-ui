@@ -1,0 +1,146 @@
+// Variables
+$background-color: #000000;
+$text-color: #ffffff;
+$text-muted: rgba(255, 255, 255, 0.7);
+$spacing-base: 1rem;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "md" {
+    @media (min-width: 768px) { @content; }
+  }
+  @if $breakpoint == "lg" {
+    @media (min-width: 1024px) { @content; }
+  }
+}
+
+.footer {
+  background-color: $background-color;
+  color: $text-color;
+  padding: $spacing-base * 4 0;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-base;
+  }
+
+  &__main {
+    display: grid;
+    gap: $spacing-base * 3;
+
+    @include respond-to('md') {
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  &__brand {
+    max-width: 320px;
+  }
+
+  &__logo {
+    height: 40px;
+    margin-bottom: $spacing-base * 2;
+  }
+
+  &__description {
+    color: $text-muted;
+    margin-bottom: $spacing-base * 2;
+    line-height: 1.6;
+  }
+
+  &__social {
+    display: flex;
+    gap: $spacing-base;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color $transition-duration;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__nav {
+    display: grid;
+    gap: $spacing-base * 2;
+
+    @include respond-to('md') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__col {
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: $spacing-base * 1.5;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: $spacing-base;
+    }
+
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      transition: color $transition-duration;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: $spacing-base * 4;
+    padding-top: $spacing-base * 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-base;
+
+    @include respond-to('md') {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    color: $text-muted;
+    margin: 0;
+  }
+
+  &__terms {
+    color: $text-muted;
+    text-decoration: none;
+    transition: color $transition-duration;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+

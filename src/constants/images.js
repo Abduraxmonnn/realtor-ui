@@ -14,6 +14,7 @@ import best_home__banner_2 from '../assets/images/BestHome-Banner2.png'
 import best_home__banner_3 from '../assets/images/BestHome-Banner3.png'
 import best_home__home_1 from '../assets/images/BestHome-Home1.png'
 import best_home__home_2 from '../assets/images/BestHome-Home2.png'
+import feedback_avatar_1 from '../assets/images/feedback-avatar.jpg'
 
 export const images = {
     logo,
@@ -32,4 +33,6 @@ export const images = {
 	best_home__banner_3,
     best_home__home_1,
     best_home__home_2,
+    feedback_avatar_1,
+
 }
