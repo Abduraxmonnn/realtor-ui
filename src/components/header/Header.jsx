@@ -1,32 +1,45 @@
-import './Header.scss'
-import { images } from '../../constants'
-import { Link } from 'react-router-dom'
+import './Header.scss';
+import {images} from '../../constants';
+import {Link, useNavigate} from 'react-router-dom'; // Add useNavigate
 
 const Header = () => {
-	return (
-		<header className='left-container'>
-			<div className='header'>
-				<div className='header-logo'>
-					<img src={images.logo} alt='logo' />
-					<span>HTH</span>
-				</div>
+    const navigate = useNavigate();
 
-				<ul className='header-links'>
-					<li>Home</li>
-					<Link to='https://www.google.com/' target='blank'>
-						<li>Products</li>
-					</Link>
-					<li>Pricing</li>
-					<li>Contact</li>
-				</ul>
+    const handleSignInClick = () => {
+        navigate('/login');
+    };
 
-				<ul className='header-login'>
-					<li className='header_sing-in'>Sign In</li>
-					<li className='header_sing-up'>Get Started Free</li>
-				</ul>
-			</div>
-		</header>
-	)
-}
+    return (
+        <header className='left-container'>
+            <div className='header'>
+                <div className='header-logo'>
+                    <img src={images.logo || "/placeholder.svg"} alt='logo'/>
+                    <span>HTH</span>
+                </div>
 
-export default Header
+                <ul className='header-links'>
+                    <li>Home</li>
+                    <Link to='https://www.google.com/' target='blank'>
+                        <li>Products</li>
+                    </Link>
+                    <li>Pricing</li>
+                    <li>Contact</li>
+                </ul>
+
+                <ul className='header-login'>
+                    <li
+                        className='header_sing-in'
+                        onClick={handleSignInClick}
+                        role="button"
+                        tabIndex={0}
+                    >
+                        Sign In
+                    </li>
+                    <li className='header_sing-up'>Get Started Free</li>
+                </ul>
+            </div>
+        </header>
+    );
+};
+
+export default Header;
